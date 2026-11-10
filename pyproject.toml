@@ -1,0 +1,21 @@
+[project]
+name = "gamerecommendation"
+version = "0.1.0"
+description = "A content-based game recommendation system powered by NLP"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gradio>=4.0",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+]
+
+[project.scripts]
+game-recommendation = "game_recommendation.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/game_recommendation"]
